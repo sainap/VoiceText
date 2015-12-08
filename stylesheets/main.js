@@ -41,10 +41,6 @@ function resultCallback() {
     if (mostrecentword == null) {
       mostrecentword = "";
     } 
-    // noStroke();
-    // textSize(35);
-    // fill(150, 130);   
-    // text(mostrecentword, displayWidth/2, displayHeight/2);
     document.getElementById("mostrecentword").innerHTML = mostrecentword;
     return mostrecentword;
 }
