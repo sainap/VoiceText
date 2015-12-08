@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{page_title}}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.17/p5.js"></script>
+
+
+  <!-- local files -->
+  <link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
+  <script src="/stylesheets/p5.dom.js"></script>
+  <script src="/stylesheets/p5.speech.js"></script>
+  <script src="/stylesheets/p5.sound.js"></script>
+  <script src="/stylesheets/main.js"></script>
+  <!--<script src="/stylesheets/speechdetect.js"></script>-->
+</head>
+<body>
+
+  <!-- background p5 -->
+  <div id="p5background">
+  </div>
+
+  <div class="container">
+    <div id="displayText">
+      <p>{{message}}</p>
+    </div>
+    <!-- where p5 is displayed -->
+    <div id="p5container"></div>
+
+  </div>  
+
+
+
+<!--
+<div class="container">
+  <h2>Search for a term to find related gifs:</h2>
+  <form action="gresponse" method="post" role="form">
+    <div class="form-group">
+      <input type="text" id="term" name="term" class="form-control"/>
+    </div>
+      <input type="submit" value="submit" name="submit"/> </form>
+  {% if prompt %}
+  <div class= 'formtitle'>{{prompt}}</div>
+  {% endif %}
+</div>
+<p>{{message}}</p> -->
+</body>
+</html>
