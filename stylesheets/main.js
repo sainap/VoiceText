@@ -2,10 +2,21 @@ var flock;
 
 var text;
 
+var mic;
+var myRec = new p5.SpeechRec(); // new P5.SpeechRec object
+myRec.continuous = true; // do continuous recognition
+myRec.interimResults = true; // allow partial recognition (faster, less accurate)
+
+var rcb;  // will be filled later with user input
+
 function setup() {
   myCanvas = createCanvas(displayWidth,displayHeight);
   myCanvas.parent("p5background");
-  createP("Drag the mouse to generate new boids.");
+
+  mic = new p5.AudioIn();
+  mic.start();
+  myRec.onResult = resultCallback(); // recognition callback
+  myRec.start(); // start engine
   
   flock = new Flock();
   // Add an initial set of boids into the system
@@ -18,11 +29,31 @@ function setup() {
 function draw() {
   background(51);
   flock.run();
+  mostrecentword = resultCallback();
+  if (mostrecentword.indexOf("yes") > -1  || mostrecentword.indexOf("ready") > -1) {
+    window.location.href = "/hello.html";
+  }
 }
+
+// Speech Detection
+function resultCallback() {
+    var mostrecentword = myRec.resultString;  
+    if (mostrecentword == null) {
+      mostrecentword = "";
+    } 
+    // noStroke();
+    // textSize(35);
+    // fill(150, 130);   
+    // text(mostrecentword, displayWidth/2, displayHeight/2);
+    document.getElementById("mostrecentword").innerHTML = mostrecentword;
+    return mostrecentword;
+}
+
 
 // Add a new boid into the System
 function mouseDragged() {
   flock.addBoid(new Boid(mouseX,mouseY));
+
 }
 
 // The Nature of Code

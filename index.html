@@ -16,20 +16,20 @@
   <script src="/stylesheets/p5.speech.js"></script>
   <script src="/stylesheets/p5.sound.js"></script>
   <script src="/stylesheets/main.js"></script>
-  <!--<script src="/stylesheets/speechdetect.js"></script>-->
+
 </head>
 <body>
 
   <!-- background p5 -->
-  <div id="p5background">
+  <div id="p5background" onclick="resultCallback()">
   </div>
 
   <div class="container">
     <div id="displayText">
       <p>{{message}}</p>
     </div>
-    <!-- where p5 is displayed -->
-    <div id="p5container"></div>
+    <div id="mostrecentword"></div>
+
 
   </div>  
 

@@ -41,8 +41,8 @@ class HelloHandler(webapp2.RequestHandler):
         vals['page_title']="Hello page"
         logging.info(type(self))
         req = self.request
-        logging.info(type(req))
-        vals['url']= req.url
+        logging.info(type(req)
+)        vals['url']= req.url
         ## for url paths that look like /hello.html?n=4&name=you
         n = int(req.get('n', 1))
         term = req.get('term', 'world')

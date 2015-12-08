@@ -13,10 +13,20 @@
 	z-index: 2;
 	position: absolute;
 	left: 25%;
+
 }
+
 p {
 	font-family: 'Exo 2', sans-serif;
 	color: white;
 	font-size: 30px;
 	font-weight: bold;
+}
+
+#mostrecentword {
+	font-family: 'Exo 2', sans-serif;
+	color: rgb(150, 150, 150);
+	font-size: 30px;
+	font-weight: bold;
+
 }
