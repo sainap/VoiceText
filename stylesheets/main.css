@@ -16,11 +16,17 @@
 
 }
 
-p {
+p, #reminder {
 	font-family: 'Exo 2', sans-serif;
 	color: white;
 	font-size: 30px;
 	font-weight: bold;
+}
+
+#reminder {
+	display: none;
+	font-weight: normal;
+	font-size: 20px;
 }
 
 #mostrecentword {

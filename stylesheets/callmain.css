@@ -1,0 +1,52 @@
+@import url(https://fonts.googleapis.com/css?family=Exo+2);
+
+body {
+	background-color: rgb(50, 50, 50);
+}
+
+.contact-form {
+	position: absolute;
+	left: 30%;
+	right: 30%;
+	top: 25%;
+}
+
+.list-group-item {
+	font-family: 'Exo 2', sans-serif;
+	background-color: white;
+    opacity: 0.8;
+    border-color: rgb(50, 50, 50);
+    font-size: 1.5em;
+}
+
+.list-group-item:first-child{
+	font-family: 'Exo 2', sans-serif;
+	font-weight: bold;
+	font-size: 2.5em;
+}
+
+.badge img {
+	vertical-align: right;
+	max-width: 2.5em;
+	max-height: 2.5em;
+	border-color: blue;
+	padding-right: 0px;
+}
+
+.list-group-item:last-child img {
+	max-width: 3em;
+	max-height: 3em;
+	border-color: transparent;
+}
+
+.badge {
+	color: rgb(50, 50, 50);
+	background-color: transparent;
+}
+
+@media screen and (max-width: 600px) {
+    .badge {
+        display: none;
+    }
+}
+

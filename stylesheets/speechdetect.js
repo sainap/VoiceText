@@ -29,10 +29,9 @@ function draw() {
 function resultCallback() {
     var mostrecentword = myRec.resultString;   
     background(50); 
-    // textSize(32);
-    // fill(255, 0, 100, 130);   
-    // text(mostrecentword, 100, 100);
-    return mostrecentword;
+    textSize(32);
+    fill(255, 0, 100, 130);   
+    text(mostrecentword, 100, 100);
 }
 
 rcb = resultCallback;
@@ -45,5 +44,5 @@ function setup() {
   console.log("happy");
 }
 function draw() {
-
+  
 }

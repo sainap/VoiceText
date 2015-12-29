@@ -31,9 +31,16 @@ function draw() {
   flock.run();
   mostrecentword = resultCallback();
   if (mostrecentword.indexOf("yes") > -1  || mostrecentword.indexOf("ready") > -1) {
-    window.location.href = "/hello.html";
+    window.location.href = "/contactList";
   }
 }
+
+window.onload = function(){
+ setTimeout(function(){
+ $("#reminder").fadeIn("slow")}, 3000);
+
+
+};
 
 // Speech Detection
 function resultCallback() {
@@ -49,15 +56,12 @@ function resultCallback() {
 // Add a new boid into the System
 function mouseDragged() {
   flock.addBoid(new Boid(mouseX,mouseY));
-
+  flock.killBoid();
+  console.log("added boid and killed");
 }
 
-// The Nature of Code
-// Daniel Shiffman
-// http://natureofcode.com
-
-// Flock object
-// Does very little, simply manages the array of all the boids
+// the boid idea is from daniel shiffman
+// I have improved the code and changed it slightly
 
 function Flock() {
   // An array for all the boids
@@ -74,12 +78,10 @@ Flock.prototype.addBoid = function(b) {
   this.boids.push(b);
 }
 
-// The Nature of Code
-// Daniel Shiffman
-// http://natureofcode.com
-
-// Boid class
-// Methods for Separation, Cohesion, Alignment added
+Flock.prototype.killBoid = function() {
+  var size = this.boids.length;
+  this.boids.splice(size -50, 1);
+}
 
 function Boid(x,y) {
   this.acceleration = createVector(0,0);
