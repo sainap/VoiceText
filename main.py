@@ -48,7 +48,7 @@ class ContactHandler(webapp2.RequestHandler):
     def post(self):
         req = self.request
         posted = False
-        contacts = {"Tori Yan": "+12068546608", "Dominic Moritz": "+14158572848", "Michael Beach": "+14155059279"}
+        contacts = {"Tori Lee": "+12068546608", "Brandon K": "+14158572848", "Michael Beach": "+14155059279"}
         sequence = str(req.get('sequence'))
         if (len(sequence) > 0):
             desired_contact = ""
@@ -83,7 +83,7 @@ class ContactHandler(webapp2.RequestHandler):
         logging.info(type(self))
         req = self.request
         logging.info(type(req))
-        vals['contacts']= {"Tori Y": 2068546608, "Brandon K": 2068492019, "Michael Beach": 4155059279}
+        vals['contacts']= {"Tori Lee": 2068546608, "Brandon K": 2068492019, "Michael Beach": 4155059279}
         n = int(req.get('n', 1))
         term = req.get('term', 'world')
 
